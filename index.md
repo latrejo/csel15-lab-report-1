@@ -22,9 +22,13 @@
 *If you already changed your global password, you can skip this step.*
 
 3. Once you change your password, you have to wait around 15 minutes upto to hours (**depends on how many students changed their password, as that can cause some issues with the server.**)
-4. Once you got it running you type in the terminal which you will use ` ssh ` + "_"(*Space*) + **username** (e.g cs15lfa22XX) + @ieng6@ucsd.edu.
+4. Once you got it running you type in the terminal which you will use ` ssh ` + "_"(*Space*) + **username** (e.g cs15lfa22XX) + @ieng6.ucsd.edu.
 5. Then you press `Enter` in your keyboard and then it would ask your for your password and you would put in the password that you changed/created from Step 2. 
 6. Then you should get something similar to what screenshot below looks like;
+
+![Remotely Connected2](LoginIntoRemote.png)
+
+> This was after making the ssh key which you will learn more in Step 5. Where password isn't needed.
 
 ![Remotely Connected](LoginSuccess.png)
 
@@ -80,6 +84,16 @@ Once we have the java file we will use scp or `secure copy` and way we use is is
 - However with `ssh keys` it makes lfe easier and faster to manuver between the local computer (*Your Computer*) and with Linux/Remote shell.
 - You create the keys but private and public and with these keys one will be privated in your computer and one can be public to the remote shell. 
 - In this case, you follow a similar procedure as scp but with a new commands called `ssh-keygen` and that creates the keys ( **public and private** ).
+- What you have to do is create the key and `$ ssh-keygen` 
+- Then you have to type in your information like `/users/localusername`
+- Then it asks for a passphrase and then ask for it again 
+- It should look like this 
+
+![SSH intro](IntrotoSsh.png)
+
+> Once you get the passphrase completed it asks for your password one more time, and after that your key should be saved.
+
+
 - At the end, when you activate your public key to the remote shell, it shows the public key and that means it was successful.
 - With this key activated, you just write /username@ieng6.ucsd.edu/ in the terminal and guess what! You don't need your password anymore and even when you implement `scp` you don't need your password for that neither..
 - It should appear like this;
